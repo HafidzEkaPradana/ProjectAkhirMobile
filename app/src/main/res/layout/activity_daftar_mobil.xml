@@ -1,29 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".DaftarMobil">
-
     <TextView
-        android:id="@+id/listcar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingTop="10dp"
-        android:textAlignment="center"
-        android:textColor="#3c6e71"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        tools:gravity="center" />
-
+        android:text="@string/daftar"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"/>
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview"
+        android:id="@+id/carlist"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/listcar"
         android:paddingTop="10dp"
         android:paddingBottom="10dp" />
 
-</RelativeLayout>
+</LinearLayout>

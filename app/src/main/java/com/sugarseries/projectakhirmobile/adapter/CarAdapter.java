@@ -1,6 +1,5 @@
 package com.sugarseries.projectakhirmobile.adapter;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,50 +13,51 @@ import com.sugarseries.projectakhirmobile.R;
 import com.sugarseries.projectakhirmobile.model.Car;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class CarAdapter extends RecyclerView.Adapter<CarAdapter.MyViewHolder>{
 
 
     private Context context;
-    private ArrayList<Car> dataMobil;
-    private Dialog dialog;
+    private ArrayList<Car> list = new ArrayList<>();
 
     @NonNull
     @Override
-    public CarAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_mobil, parent, false);
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View itemView = LayoutInflater.from(context).inflate(R.layout.row_mobil, parent, false);
         return new MyViewHolder(itemView);
     }
+
     class MyViewHolder extends RecyclerView.ViewHolder{
         TextView namamobil, jenis, jumlah, merk, harga;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            namamobil = itemView.findViewById(R.id.txnamaMobil);
-            jenis = itemView.findViewById(R.id.txjenis);
-            jumlah = itemView.findViewById(R.id.txjumlah);
-            merk = itemView.findViewById(R.id.txmerk);
-            harga = itemView.findViewById(R.id.txharga);
+            namamobil = itemView.findViewById(R.id.tv_mobil);
+            jenis = itemView.findViewById(R.id.tv_jenis);
+            jumlah = itemView.findViewById(R.id.tv_jumlah);
+            merk = itemView.findViewById(R.id.tv_merk);
+            harga = itemView.findViewById(R.id.tv_harga);
         }
     }
 
     @Override
     public void onBindViewHolder(@NonNull CarAdapter.MyViewHolder holder, int position) {
-        holder.namamobil.setText(dataMobil.get(position).getNamaMobil());
-        holder.jenis.setText(dataMobil.get(position).getJenisMobil());
-        holder.jumlah.setText(dataMobil.get(position).getJumlah());
-        holder.merk.setText(dataMobil.get(position).getMerk());
-        holder.harga.setText(dataMobil.get(position).getHarga());
+
+        Car car = list.get(position);
+        holder.namamobil.setText(car.getNamaMobil());
+        holder.jenis.setText(car.getJenis());
+        holder.jumlah.setText(car.getJumlah());
+        holder.merk.setText(car.getMerk());
+        holder.harga.setText(car.getHarga());
     }
 
     @Override
     public int getItemCount() {
-        return dataMobil.size();
+        return list.size();
     }
 
-    public CarAdapter(Context cont, ArrayList<Car> data){
-        context = cont;
-        dataMobil = data;
+    public CarAdapter(Context context, ArrayList<Car> list) {
+        this.context = context;
+        this.list = list;
     }
 }

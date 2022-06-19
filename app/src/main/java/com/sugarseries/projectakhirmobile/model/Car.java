@@ -1,19 +1,8 @@
 package com.sugarseries.projectakhirmobile.model;
 
 public class Car {
-    String id, namaMobil, jumlah, image, jenisMobil, merk ,harga;
-
-
-
+    String namaMobil, jumlah, image, jenis, merk, harga;
     public Car(String namaMobil, String jenis, String jumlah, String merk, String harga) {
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getNamaMobil() {
@@ -40,12 +29,12 @@ public class Car {
         this.image = image;
     }
 
-    public String getJenisMobil() {
-        return jenisMobil;
+    public String getJenis() {
+        return jenis;
     }
 
-    public void setJenisMobil(String jenisMobil) {
-        this.jenisMobil = jenisMobil;
+    public void setJenis(String jenis) {
+        this.jenis = jenis;
     }
 
     public String getMerk() {

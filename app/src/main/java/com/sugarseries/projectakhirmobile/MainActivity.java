@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         daftar = findViewById(R.id.daftarMobil);
         pesan = findViewById(R.id.pemesanan);
         histori = findViewById(R.id.histori);
