@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "277964972221",
+    "project_id": "rentalcar3-92f07",
+    "storage_bucket": "rentalcar3-92f07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277964972221:android:4766036d1e80cf2c4257d4",
+        "android_client_info": {
+          "package_name": "com.sugarseries.projectakhirmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "277964972221-p9j0lquflb1u3sskmvlj7d1e3i22p6km.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5GhDWt9Uty4VWl37XIpkoW0ETIYEW1HI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "277964972221-p9j0lquflb1u3sskmvlj7d1e3i22p6km.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
